@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Quiz app</title>
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <style>
+            body{
+                display:flex;
+                justify-content: center;
+                height:90vh;
+                background-color:rgb(238, 137, 238);
+                align-items: center;
+            }
+            .quiz{
+                width:500px;
+                height:80%;
+                background-color: white;
+                border-radius:10px;
+            }
+            .quiz h2{
+                text-align:center;
+                margin-top:50px;
+                font-size:30px;
+                color:blueviolet;
+            }
+            .quiz .choice button{
+                padding:5px 10px;
+                margin-left:50px;
+                border-radius:5px;
+                font-size:20px;
+                display: block;
+                width:400px;
+                margin-top:5px;
+                cursor:pointer;
+                transition:0.5s;
+            }
+            .quiz .choice button:hover{
+                background-color:rgb(200, 98, 226);
+            }
+            .quiz .choice{
+                text-align:center;
+            }
+            .quiz .result{
+                text-align:center;
+                font-size:25px;
+                color:rgb(248, 94, 94);
+            }
+            .next{
+                font-size:20px;
+                padding:5px 10px;
+                margin-left:200px;
+                margin-bottom:10px;
+                width:100px;
+                cursor:pointer;
+                background-color: rgb(188, 117, 255);
+                border-radius:10px;
+                transition:0.5s;
+            }
+            .next:hover{
+                background-color: rgb(255, 194, 247);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="quiz">
+            <h2 data-aos="fade-up" class="question"></h2>
+            <div class="choice"></div>
+            <h3 class="result"></h3>
+            <button class="next">Next</button>
+        </div>
+        <script src="app.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init();
+          </script>
+    </body>
+</html>
